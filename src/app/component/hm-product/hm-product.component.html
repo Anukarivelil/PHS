@@ -1,0 +1,27 @@
+<!-- <div class="container content-main pt-5 pb-5 mt-5"> -->
+
+<div class="container content-main pt-5 pb-5">
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h1 class="mb-5">Grow Your Business  <br />
+                & Maximise Your Online Revenue<br />
+                <span>with Smart Technology Solutions</span></h1>
+
+            <div class="d-flex flex-column gap-3">
+                <ng-container *ngFor="let prod of productList">
+                    <div class="product-grid d-flex gap-4 p-3" routerLink="/{{prod.link}}">
+                        <div class="img-div">
+                            <img [src]="prod.image" alt="{{prod.name}}" class="img-fluid">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p class="m-0">{{prod.name}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-md-5 offset-md-1 product-right">
+            <!-- <img class="w-100" src="assets/product-girl.png"/> -->
+        </div>
+    </div>
+</div>

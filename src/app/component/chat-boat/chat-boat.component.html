@@ -1,0 +1,67 @@
+<button [matMenuTriggerFor]="menu" class="chat-icon-btn p-0 pulse">
+  <div class="d-flex align-items-center justify-content-center ">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>
+  </div>
+</button>
+
+<mat-menu #menu="matMenu" class="custom-matmenu-card p-4">
+  <div class="d-flex flex-column h-100">
+    <div class="flex-grow-0">
+      <h6 class="mb-3">Search About PHS</h6>
+      <form class="" (click)="$event.stopPropagation();">
+      <mat-form-field class="w-100" appearance="outline">
+          <mat-label>Search</mat-label>
+          <input matInput placeholder="Pick any Question" aria-label="Number" [formControl]="myControl"
+            [matAutocomplete]="auto" />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+    </div>
+
+
+
+    <div class="flex-grow-1 d-flex p-3 output-div" (click)="$event.stopPropagation();">
+      <div class="h-100 d-flex flex-grow-1 position-relative">
+        <div class="position-absolute scroll-container pe-2">
+
+
+          <div class="d-flex flex-column h-100 align-items-center justify-content-center no-data px-3"
+            *ngIf="selectedItem !== 'Question One' 
+            && selectedItem !== 'Question two' 
+            && selectedItem !== 'Question three'">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="help"></mat-icon>
+            <p class="text-center mt-2">
+              Please ask any Question Related our service, product & Support
+            </p>
+          </div>
+
+
+          <div *ngIf="selectedItem === 'Question One'">
+            <h6>Channel Manager</h6>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+              massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+              felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+              venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincid</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+              massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+              felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+              venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincid</p>
+          </div>
+          <div *ngIf="selectedItem === 'Question two'">
+            <p>Item 2</p>
+          </div>
+          <div *ngIf="selectedItem === 'Question three'">
+            <p>Item 3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-menu>

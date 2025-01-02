@@ -1,0 +1,40 @@
+section{
+    overflow-x: hidden;
+}
+.service-head{
+    p,h1{
+        color: #092B73;
+    }
+}
+.scroll {
+    overflow-x: visible;
+    transition: all 4s ease-in-out;
+    .scroll-container {
+        display: inline-block; /* Ensures all service cards are in one row */
+        white-space: nowrap; /* Keeps service cards in a single row */
+        overflow-x: auto; /* Allows horizontal scrolling */
+        width: 100%; /* Full width */
+        transition: all 4s ease-in-out;
+        .service-card {
+            transition: all 4s ease-in-out;
+            width: 280px;
+            margin: 10px;
+            display: inline-block; /* Inline block to allow proper horizontal scrolling */
+        }
+        &::-webkit-scrollbar {
+            width: 0.5em;
+            height: 0.5em;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+          }
+    }
+}
+
+.data-side{
+    width: 80%;
+}

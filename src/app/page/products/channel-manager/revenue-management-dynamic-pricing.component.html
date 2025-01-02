@@ -1,0 +1,26 @@
+<section>
+    <app-menu></app-menu>
+    <app-banner [homeClass]="homeClass" [videoStat]="videoStat" [subPageStat]="subPageStat" [subPage]="subPage"
+        [bannerTitle]="bannerTitlefst" [bannerSecond]="bannerTitlesnd" [bannerDescription]="bannerDescription"
+        [primaryButtonText]="primaryButtonText" [secondaryButtonText]="secondaryButtonText"></app-banner>
+</section>
+<section class="mt-3">
+    <div class="container">
+
+        <app-product-detail [productName]="productName" [productDetails1]="productDetails1"
+            [productDetails2]="productDetails2" [productDetails3]="productDetails3" [productDetails4]="productDetails4"
+            [prodImage]="prodImage"></app-product-detail>
+
+
+        <app-product-advantage></app-product-advantage>
+    </div>
+    <div class="container">
+        <app-product-key-details></app-product-key-details>
+    </div>
+</section>
+<section class="products-list py-5 mt-5">
+    <app-product-list></app-product-list>
+</section>
+<section>
+    <app-footer></app-footer>
+</section>

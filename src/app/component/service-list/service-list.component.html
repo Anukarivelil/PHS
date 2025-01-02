@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="pb-3">OUR SERVICE</h4>
+        </div>
+        <div class="col-4" *ngFor="let service of PHSServiceList">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="{{service.image}}" class="img-fluid" alt="{{service.name}}">
+                </div>
+                <div class="service-detail">
+                    <div class="w-100">
+                        <div class="d-flex gap-4 my-2">
+                            <div class="flex-grow-1 data-side">
+                                <h5 class="text-truncate mt-1 mb-0" matTooltip="{{service.name}}">{{service.name}}</h5>
+                            </div>
+                            <div class="flex-grow-0"> 
+                                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> -->
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <p class="mb-4 pe-3" matTooltip="{{service.detail}}">{{service.detail}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

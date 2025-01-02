@@ -1,0 +1,27 @@
+section {
+    background-image: url(../../../../public/assets/map-dots.png);
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    background-size: contain;
+}
+
+.partner-row-first {
+    position: relative;
+    width: 2000px;
+    left: 0;
+}
+.partner-second-first {
+    position: relative;
+    width: 2000px;
+    left: -100px;
+}
+    .partner-card {
+        width: 230px;
+        height: 120px;
+        overflow: hidden;
+        margin: 10px;
+        background-color: #F1F1F1;
+        display: inline-block;
+        border-radius: 30px;
+    }

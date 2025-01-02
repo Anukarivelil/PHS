@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img class="img-fluid" src="assets/aboutimg.png" />
+        </div>
+        <div class="col-md-6">
+            <div class="ps-3 d-flex h-100 justify-content-center flex-column gap-2">
+                <h4 class="mb-4">{{AboutPageHead}}</h4>
+                <div>
+                    <ng-container *ngFor="let about of aboutPara">
+                        <p class="mb-1"><strong>{{about.parastrong}}</strong>{{about.para}}</p>
+                    </ng-container>
+                </div>
+                    <h5 class="mb-2 mt-3">{{AboutSubHead}}</h5>
+                <div>
+                    <ul>
+                        <ng-container *ngFor="let core of coreService">
+                            <li class="mb-4"><strong>{{core.pointstrong}}</strong> - {{core.points}}</li>
+                        </ng-container>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

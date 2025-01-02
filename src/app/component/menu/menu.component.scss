@@ -1,0 +1,42 @@
+.navbar-nav{
+    li{
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.activeNav{
+    transition: all 0.4s;
+    background-color: #2050b0b4;
+    .navbar-brand{
+        img{
+            width: 80px;
+        }
+    }
+}
+
+
+.navbar-collapse{
+    &.collapse{
+        &.show{
+            @media (max-width: 767.98px) {
+                background: #123380;
+                margin-left: -14px;
+                padding: 10px;
+            }
+            ul{
+                li{
+                    @media (max-width: 767.98px) {
+                        margin: 15px 0;
+                    }
+                }
+            }
+            button{
+                @media (max-width: 767.98px) {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

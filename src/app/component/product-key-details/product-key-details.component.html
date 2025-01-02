@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="py-5 d-flex align-items-center justify-content-between gap-3">
+            <div class="key-card d-flex align-items-center justify-content-center flex-column gap-2" 
+            *ngFor="let key of keyDetails">
+                <mat-icon svgIcon="{{key.icon}}" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+                <h6 class="mt-3">{{key.name}}</h6>
+            </div>
+        </div>
+    </div>
+</div>           

@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex gap-3 mb-3">
+                <div><img class="img-responsive profile-img mt-2" src="assets/teams/sejo.png"/></div>
+                <div>
+                    <h4 class="mb-1">Sejo Jose</h4>
+                    <p class="mb-0 designation">Founder & Managing Director</p>
+                    <p>Merging Property Management Solutions with With Digital Excellence   </p>
+                    <p>A true veteran in the hospitality industry, Sejoe Jose is the visionary and creative force behind the unique travel and tourism conglomerate that includes Marvel Tours, Marvel Cruise, Perfect Hands Solutions, and Xin Chao DMC , Vietnam.</p>
+                    <p>His vast experience covers a wide range of areas, including technological innovation, property management, and strategic business development. By skillfully merging his vast experience in the travel industry and cutting-edge software solutions, he has transformed property management technology.</p>
+                    <p>Under Sejoe's leadership, PHS has grown into a full-service solution provider in the property management sector. The company offers innovative channel management software alongside practical property management services, enabling it to effectively address any challenges encountered in running a successful hospitality business.</p>
+                    <p>A visionary with over two decades of experience, Sejoe has brought insight, innovation, and significant enhancements into experiential hospitality in India. Driven by purpose and passion, he continues to craft unforgettable experiences in travel and tourism, always with a commitment to excellence.</p>
+                </div>
+            </div>
+
+            <ng-container *ngFor="let team of phsteams">
+            <div class="d-flex gap-3 mb-3 align-items-center">
+                <div><img class="img-responsive profile-img mt-2" src="assets/teams/{{team.pic}}"/></div>
+                <div class="d-flex h-100 justify-content-center flex-column">
+                    <h4 class="mb-1">{{team.name}}</h4>
+                    <p class="mb-0 designation">{{team.designation}}</p>
+                    <p class="mb-0">{{team.description}}</p>
+
+                </div>
+            </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="career-div p-5 d-flex flex-column align-items-center justify-content-center">
+                <h1>Careers at PHS                </h1>
+                <p class="text-center px-5">We're growing our team at Perfect Hands Solutions! If you're excited about travel technology and want to be part of something meaningful, we'd love to hear from you.
+                </p>
+
+                <br/>
+                <p class="mb-0"><span>Email your resume to:</span></p>
+                <h4>hr&#64;perfecthandssolutions.com</h4>
+                <div class="contact-btn secondary py-3 px-5 mt-4">Contact US</div>
+            </div>
+        </div>
+    </div>
+</div>

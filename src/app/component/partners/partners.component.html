@@ -1,0 +1,20 @@
+<section class="py-5 my-5 " #mySection>
+        <div class="partner-row-first" #partnerRow>
+            <div class="partner-card p-4" *ngFor="let r1 of partnerRowFst">
+                <div class="d-flex align-items-center justify-content-center h-100" matTooltip="{{r1.tooltip}}">
+                    <img src="assets/partners/{{r1.image}}" class="img-fluid"/>
+                </div>
+            </div>
+        
+            
+        </div>
+
+        <div class="partner-second-first" #partnerRowSecond>
+            <div class="partner-card p-4" *ngFor="let r2 of partnerRowSnd">
+                <div class="d-flex align-items-center justify-content-center h-100" matTooltip="{{r2.tooltip}}">
+                    <img src="assets/partners/{{r2.image}}" class="img-fluid"/>
+                </div>
+            </div>
+            
+        </div>
+</section>

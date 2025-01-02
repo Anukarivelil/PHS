@@ -1,0 +1,138 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme object.
+$PHS-theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: (scale: 0,
+      )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($PHS-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($PHS-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($PHS-theme);
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$primary-color: #2050B0;
+$secondary-color: #F96918;
+$third-color:#EDEDED;
+
+@mixin open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  @include open-sans();
+  font-size: 16px;
+  p{
+    line-height: 1.8rem;
+    font-size: .95rem;
+  }
+  h1 {
+    font-weight: 700 !important;
+    font-size: 2.25rem;
+  }
+  h4 {
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+button {
+  border-radius: 5px !important;
+  text-transform: uppercase;
+  font-weight: 300;
+  &.btn-primary {
+    background-color: $secondary-color;
+    color: white !important;
+  }
+  &.btn-secondary{
+    background-color: $third-color;
+  }
+}
+
+
+.product-grid {
+  background-color: #F4F4F4;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  .img-div {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+  }
+  &:hover {
+      transition: all 50s linear;
+      background: rgb(41, 69, 138);
+      background: linear-gradient(90deg, rgba(41, 69, 138, 1) 0%, rgba(37, 84, 178, 1) 100%);
+      p {
+          color: white;
+      }
+  }
+}
+
+.description-text{
+  font-size:0.95rem;
+  line-height: 1.9rem;
+  // font-style: italic;
+}
+
+app-menu{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+}
+
+.shadow-1{
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: rgb(255,255,255);
+    background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    top: 100%;
+  }
+
+}

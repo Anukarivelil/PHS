@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row pt-3">
+                <div class="col-md-4">
+                    <div class="mt-5 p-5 plan-card">
+                        <h4>Silver Package </h4>
+                        <ul>
+                        <li *ngFor="let silver of silverpack">
+                            {{silver.list}}
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="mx-2 p-5 plan-card platinum">
+                        <h4>Platinum Package</h4>
+                        <ul>
+                        <li *ngFor="let platinum of platinumpack">
+                            {{platinum.list}}
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="mt-5 p-5 plan-card">
+                        <h4>Gold Package</h4>
+                        <ul>
+                            <li *ngFor="let gold of goldpack">
+                                {{gold.list}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@keyframes borderAnimate{
+    0%{outline: solid 3px #4260a5;}
+    60%{outline: solid 150px #4260a5;}
+}
+section{
+    background: rgb(34,86,189);
+    background: linear-gradient(95deg, rgba(34,86,189,1) 0%, rgba(48,78,146,1) 100%);
+    color: white;
+    overflow: hidden;
+    h1{
+        font-size: 6.5rem;
+    }
+    .statscaption{
+        text-align: right;
+        max-width: 400px;
+        opacity: 0.8;
+    }
+    .side-animator{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: #3A5697;
+        border-radius: 50%;
+        outline: solid 150px #4260a5;
+        animation: borderAnimate 4s ease-in-out infinite;
+        opacity: 0.4;
+        right: -75px;
+        top: calc(50% - 75px);
+    }
+}

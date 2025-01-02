@@ -1,0 +1,97 @@
+.card-show{
+    display: none;
+    &.active-testimonial{
+        display: block;
+        transition: all 0.5s;
+    }
+}
+.testimonials {
+    background: rgb(34, 86, 189);
+    background: linear-gradient(95deg, rgba(34, 86, 189, 1) 0%, rgba(48, 78, 146, 1) 100%);
+    border-radius: 30px 30px 0 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &::after{
+        content: '';
+    position: absolute;
+    background-image: url(../../../../public/assets/tst-pattern.png);
+    background-repeat: no-repeat;
+    right: 34px;
+    width: 24%;
+    height: 100%;
+    min-width: 300px;
+    /* background-position-y: center; */
+    background-position-x: right;
+    display: none;
+    }
+    .propeerty-img {
+        margin-bottom: -100px;
+        position: relative;
+        @media (max-width: 991.98px) {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 450px;
+            @media (max-width: 991.98px) {
+                max-width: 100%;
+            }
+        }
+
+        h2 {
+            position: absolute;
+            top: 45%;
+            color: #EAEAEA;
+            font-weight: 700;
+
+            &::after {
+                content: '';
+                width: 20px;
+                height: 100%;
+                background: #EAEAEA;
+                position: absolute;
+                left: 10px;
+                top: 0;
+                border-radius: 5px;
+            }
+        }
+        .tet-more {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .testimonial {
+        .tet-user-img {
+            border: solid 10px #466BBB;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .tet-user-data {
+            h5 {
+                color: #fff;
+                font-weight: 700;
+
+                span {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                color: #C0C0C0;
+                font-style: normal;
+            }
+        }
+
+        p {
+            color: #fff;
+            font-style: italic;
+            font-size: 0.85rem;
+            line-height: 1.2rem;
+            font-size: 0.96rem;
+            line-height: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+section{
+    background: rgb(41,69,138);
+    background: linear-gradient(180deg, rgba(41,69,138,1) 0%, rgba(46,46,46,1) 58%);
+    color: white;
+    font-weight: 300;
+    overflow-x: hidden;
+    img{
+        &.footer-shape{
+            transform: rotate(180deg);
+            margin-top: -5px;
+            transform: scale(1, -1);
+    margin-left: -55px;
+    width: 105%;
+        }
+    }
+}

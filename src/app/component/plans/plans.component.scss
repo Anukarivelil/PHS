@@ -1,0 +1,22 @@
+.plan-card{
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+    }
+
+    &.platinum{
+        background: rgb(34, 86, 189);
+        background: linear-gradient(95deg, rgb(34, 86, 189) 0%, rgb(48, 78, 146) 100%);
+        color: #fff;
+        -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+    }
+}

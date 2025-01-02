@@ -1,0 +1,37 @@
+<section>
+    <img src="assets/banner-bottom.svg" class="footer-shape"/>
+    <div class="container pt-5 mt-3 pb-3">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/whitelogo.png"/>
+            </div>
+            <div class="col-md-3">
+                <h6 class="px-2">Products</h6>
+                <ul>
+                    <li *ngFor="let prod of ftrproducts">
+                        {{prod.product}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="px-2">Services</h6>
+                <ul>
+                    <li *ngFor="let ser of ftrservice">
+                        {{ser.service}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="px-2">Quick Links</h6>
+                <ul>
+                    <li *ngFor="let link of ftrquicklink">
+                        {{link.link}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="px-2">
+        3212
+    </div>
+</section>

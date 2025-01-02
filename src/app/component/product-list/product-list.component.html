@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 class="pb-3">MORE PRODUCTS</h5>
+        </div>
+        <ng-container *ngFor="let prod of productList">
+            <div class="col-md-4 mb-2" routerLink="/{{prod.link}}">
+                <div class="product-grid d-flex gap-2 p-3">
+                    <!-- <div class="img-div">
+                        <img [src]="prod.image" alt="{{prod.name}}" class="img-fluid">
+                    </div> -->
+                    <div class="d-flex align-items-center">
+                        <p class="m-0">{{prod.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

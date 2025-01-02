@@ -1,0 +1,38 @@
+<section class="py-5">
+    <div class="container pt-5 pb-4 service-head">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="mb-0">Reimagine what your property can accomplish,</p>
+                <h1>Then make it a reality <br> with the right technology.</h1>
+            </div>
+            <div class="col-md-2">
+                <button (click)="scroll('prev')">PREV</button>
+                <button (click)="scroll('next')">NEXT</button>
+            </div>
+        </div>
+    </div>
+    <section class="scroll container">
+        <div class="scroll-container" #scrollContainer>
+            <ng-container *ngFor="let service of PHSServiceList">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="{{service.image}}" class="img-fluid" alt="{{service.name}}">
+                    </div>
+                    <div class="service-detail">
+                        <div class="w-100">
+                        <div class="d-flex gap-4">
+                            <div class="flex-grow-1 data-side">
+                                <h6 class="text-truncate mt-1 mb-0" matTooltip="{{service.name}}">{{service.name}}</h6>
+                                <p class="text-truncate mb-0" matTooltip="{{service.detail}}">{{service.detail}}</p>
+                            </div>
+                            <div class="flex-grow-0 d-flex align-items-center justify-content-center">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_forward"></mat-icon>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </section>
+</section>
